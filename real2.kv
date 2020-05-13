@@ -1,0 +1,232 @@
+
+
+<Game_2>:    
+    item1 : item1
+    item2 : item2
+    push : push
+    clickbutt : clickbutt
+    checkup : checkup
+    checkdown : checkdown
+    pausebutt : pausebutt
+ 
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "backback.jpg"
+    
+    
+
+    Level_2:
+        center_x: root.width / 2
+        top: root.top - 20
+
+    Background_Bonus_2:
+        center_x : root.center_x
+        center_y : root.center_y
+
+    Label:
+        id:scoretext
+        center_x: root.width / 2
+        top: root.top - 50
+        font_size: 70
+        text:str(root.score)
+    Label:
+        id:scoretextmiss
+        center_x : root.width / 1.5
+        top: root.top - 62
+        font_size: 40
+        text:str(root.scoremiss)
+
+    Itemgame_2:
+        id: item2
+        center_x : root.center_x * 1.35
+        center_y : root.center_y    
+    Itemgame_2:
+        id: item1
+        center_x : root.center_x * 1.35
+        center_y : root.center_y
+    Pushup_2:
+        id: push
+        center_x : root.center_x / 1.9
+        center_y : root.center_y 
+    Clickbutt_2:
+        id:clickbutt
+        center_x : root.center_x + 300
+        center_y : root.center_y / 2
+        on_press : self.on_press
+        
+        
+
+
+
+    Checkdown_2:
+        id : checkdown
+        center_x : root.center_x / 1.58
+        center_y : root.center_y / 2.2
+    Checkup_2:
+        id: checkup
+        center_x : root.center_x / 1.47
+        center_y : root.center_y *1.58
+    empu_2:
+        center_x : 340
+        center_y : root.center_y * 1.59
+    empd_2:
+        center_x : 380
+        center_y : root.center_y / 2
+    Pausebutt_2:
+        id: pausebutt
+        center_x : root.center_x * 2
+        center_y : root.center_y * 2
+        on_press : self.on_press
+    Widget:
+        size:70,70
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: 465,490
+                source: "item/cangood.png"
+    Widget:
+        size:70,70
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: 540,490
+                source: "item/newsgood.png"
+    Widget:
+        size:70,70
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: 620,490
+                source: "item/waterbottlegood.png"
+    Widget:
+        size:70,70
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: 690,490
+                source: "item/bottlegood.png"
+    Widget:
+        size:70,70
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: 480,160
+                source: "item/bottlebad.png"
+    
+    Widget:
+        size:70,70
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: 550,160
+                source: "item/phonebad.png"
+    Widget:
+        size:70,70
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: 625,160
+                source: "item/plasticbad.png"
+
+    Widget:
+        size:70,70
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: 700,160
+                source: "item/inkbad.png"
+
+
+<Resumebutt_2>:
+    size: 150,50
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source : self.source
+
+
+<Checkdown_2>:
+    size:150,150
+
+
+<Checkup_2>:
+    size: 150,150
+    canvas: 
+        
+        Rectangle:
+            size:self.size
+            pos:self.pos
+            source: "cancanre.png"
+
+<Pushup_2>:
+    size:70,70
+    image2 : image2
+    Image:
+        id:image2
+        source: "0.png"
+        size: root.size
+        pos: root.pos
+ 
+
+<Itemgame_2>:
+    size: 90,90
+    image: image
+    Image:
+        id: image
+        source: "0.png" 
+        size:root.size
+        pos:root.pos
+            
+<Pausebutt_2>:
+    size: 20,20
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source : "pausebutt.png"
+    
+
+<Clickbutt_2>:
+    image: image
+    size: 150,150
+    background_color: 0,0,0,0
+    Image:
+        id: image
+        source: "clickbutt.png"
+        size: root.size
+        pos: root.pos
+<Level_2>:
+    size: 300,300
+    canvas:
+        Rectangle:    
+            size: self.size
+            pos: self.pos
+            source: "level2.png"
+<Background_Bonus_2>:
+    size: 800,600
+    canvas:
+        Rectangle:    
+            size: self.size
+            pos: self.pos
+            source: "stage2e.png"
+
+
+<empu_2>:
+    size: 500,350
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source : "cancanre.png"
+            
+
+<empd_2>:
+    size: 800,500
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source : "cantcantre.png"
