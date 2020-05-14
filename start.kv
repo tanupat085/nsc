@@ -1,0 +1,418 @@
+#:import FallOutTransition kivy.uix.screenmanager.FallOutTransition
+
+
+<StageManager>:
+    transition: FallOutTransition()
+    S1:
+    S2:
+    StartPage:
+    Selectionpage:
+    Helppage1:
+    Helppage2:
+    Helppage3:
+    Helppage4:
+    Helppage5:
+    Helppage6:
+    Helppage7:
+    FirstStage:
+    SecondStage:
+    ThirdStage:
+    
+
+<S1>:
+    
+    Widget:
+        size: 800,600
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.center_y
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "story1.jpg"
+    Button:
+        size: 150,80
+        size_hint : None,None
+        center_x: 900
+        center_y: 100
+        on_release: root.manager.current = "s2"
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "realgo.png"
+
+<S2>:
+    name: "s2"
+    Widget:
+        size: 800,600
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.center_y
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "story2.jpg"
+    Button:
+        size: 150,80
+        size_hint : None,None
+        center_x: 900
+        center_y: 100
+        on_release: root.manager.current = "startpage"
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "realgo.png"
+
+<StartPage>:
+
+    music: music
+    name: "startpage"
+
+    
+ 
+    Widget:
+        size: 600,700
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.center_y
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "realreal.jpg"
+    Widget:
+        size: 700,400
+        size_hint : None,None
+        center_x: root.center_x
+        y: 320
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "logo.png"
+    Button:
+        size: 400,150
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.top / 2.2
+        on_release: root.manager.current = "menu"
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "realplay.png"
+    MusicButt:
+        id: music
+        center_x: root.center_x * 1.4
+        center_y: root.center_y * 1.82
+        on_release: self.on_press
+        
+        
+    Button:
+        size: 400,150
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.top / 5.2
+        on_release: root.manager.current = "help1"
+        canvas:
+            Rectangle:
+                size: 400,150
+                pos: self.pos
+                source: "realhelp.png"
+
+
+
+
+
+
+<Selectionpage>:
+    name: "menu"
+
+    butt1: butt1
+    butt2: butt2
+    butt3: butt3
+    buttback: buttback
+    
+
+    Widget:
+        size: 600,700
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.center_y
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "realreal.jpg"
+
+
+
+    StageButton:
+        id: butt1
+        center_x: root.center_x - 200
+        center_y: root.center_y
+        text: "1"
+        on_release: root.manager.current = "firststage"
+        
+    StageButton:
+        id: butt2
+        center_x: root.center_x 
+        center_y: root.center_y
+        text: "2"
+        on_release: root.manager.current = "secondstage"
+        
+
+    StageButton:
+        id: butt3
+        center_x: root.center_x + 200
+        center_y: root.center_y
+        text: "3"
+        on_release: root.manager.current = "thirdstage"
+        
+
+    StageButton_back:
+        id: buttback
+        x: 700
+        y: 500
+        on_release: root.manager.current = "startpage"
+   
+
+<Firststage>:
+    name: "firststage"
+    stage1 : stage1
+    
+    Game_1:
+        id: stage1
+
+    StageButton_back:
+        id: buttback
+        center_x : root.center_x * 1.55
+        center_y : root.center_y * 1.75
+        on_release: root.manager.current = "startpage"
+
+<Secondstage>:
+    name: "secondstage"
+    stage2 : stage2
+
+    Game_2:
+        id: stage2
+
+    
+    StageButton_back:
+        id: buttback
+        center_x : root.center_x * 1.55
+        center_y : root.center_y * 1.75
+        on_release: root.manager.current = "startpage"
+
+<Thirdstage>:
+    name: "thirdstage"
+    stage3 : stage3
+
+    Gamemain_3:
+        id: stage3
+
+    
+    StageButton_back:
+        id: buttback
+        center_x : root.center_x * 1.55
+        center_y : root.center_y * 1.75
+        on_release: root.manager.current = "startpage"
+<Helppage1>:
+    name: "help1"
+    Widget:
+        size: 800,600
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.center_y
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "story1.jpg"
+    StageButton_go:
+        id: buttback
+        x: 800
+        y: 50
+        on_release: root.manager.current = "help2"
+    
+
+<Helppage2>:
+    name: "help2"
+    Widget:
+        size: 800,600
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.center_y
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "story2.jpg"
+    StageButton_go:
+        id: buttback
+        x: 800
+        y: 50
+        on_release: root.manager.current = "help3"
+    StageButton_back:
+        id: buttback
+        x: 200
+        y: 50
+        on_release: root.manager.current = "help1"
+
+<Helppage3>:
+    name: "help3"
+    Widget:
+        size: 800,600
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.center_y
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "story3.jpg"
+    StageButton_go:
+        id: buttback
+        x: 800
+        y: 50
+        on_release: root.manager.current = "help4"
+    StageButton_back:
+        id: buttback
+        x: 200
+        y: 50
+        on_release: root.manager.current = "help2"
+
+<Helppage4>:
+    name: "help4"
+    Widget:
+        size: 800,600
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.center_y
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "story4.jpg"
+    StageButton_go:
+        id: buttback
+        x: 800
+        y: 50
+        on_release: root.manager.current = "help5"
+    StageButton_back:
+        id: buttback
+        x: 200
+        y: 50
+        on_release: root.manager.current = "help3"
+<Helppage5>:
+    name: "help5"
+    Widget:
+        size: 800,600
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.center_y
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "story5.jpg"
+    StageButton_go:
+        id: buttback
+        x: 800
+        y: 50
+        on_release: root.manager.current = "help6"
+    StageButton_back:
+        id: buttback
+        x: 200
+        y: 50
+        on_release: root.manager.current = "help4"
+<Helppage6>:
+    name: "help6"
+    Widget:
+        size: 800,600
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.center_y
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "story6.jpg"
+    StageButton_go:
+        id: buttback
+        x: 800
+        y: 50
+        on_release: root.manager.current = "help7"
+    StageButton_back:
+        id: buttback
+        x: 200
+        y: 50
+        on_release: root.manager.current = "help5"
+<Helppage7>:
+    name: "help7"
+    Widget:
+        size: 800,600
+        size_hint : None,None
+        center_x: root.center_x
+        center_y: root.center_y
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "story7.jpg"
+    StageButton_go:
+        id: buttback
+        x: 480
+        y: 260
+        on_release: root.manager.current = "startpage"
+    StageButton_back:
+        id: buttback
+        x: 200
+        y: 50
+        on_release: root.manager.current = "help6"
+
+
+<StageButton>:
+    size: 150,150
+    size_hint : None,None
+    background_color: 0,0,0,0
+    image: image
+    Image:
+        id: image
+        size: root.size
+        pos: root.pos
+        source: "butto.png"
+<StageButton_back>:
+    size: 150,150
+    size_hint : None,None
+    background_color: 0,0,0,0
+    image: image
+    Image:
+        id: image
+        size: root.size
+        pos: root.pos
+        source: "realback.png"
+<StageButton_go>:
+    size: 150,150
+    size_hint : None,None
+    background_color: 0,0,0,0
+    image: image
+    Image:
+        id: image
+        size: root.size
+        pos: root.pos
+        source: "realgo.png"
+<MusicButt>:
+    size: 80,80
+    size_hint : None ,None
+    background_color: 0,0,0,0
+    image : image
+    Image:
+        id:image
+        size:root.size
+        pos:root.pos
+        source: "pausebutt.png"
